@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://allinonemodapk.app/sitemap.xml
