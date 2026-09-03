@@ -880,18 +880,7 @@ getRealAppIcon = function(app) {
 
         <div class="apps-grid" id="appsGrid"></div>
 <div class="home-native-banner" aria-label="Advertisement">
-  <div class="home-native-banner-inner">
-    <script>
-      atOptions = {
-        'key' : '93bedc55ee7ba7207cc90b207a7fc4b6',
-        'format' : 'iframe',
-        'height' : 250,
-        'width' : 300,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highrevenueformat.com/93bedc55ee7ba7207cc90b207a7fc4b6/invoke.js"><\/script>
-  </div>
+  
 </div>
 
 
@@ -1272,11 +1261,7 @@ We believe in transparency, technology education, and user security. We do not d
                     <div class="app-link-label">🔗 Download Link</div>
                     <div class="app-meta">${vipTag}${catTag}${sizeTag}</div>
                     <div class="app-downloads" style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 10px;">⬇️ ${dCount}+ downloads</div>
-<div class="native-download-ad" style="margin:12px 0;text-align:center;">
-                        <script async="async" data-cfasync="false" src="https://pl31144873.profitableratecpmnetwork.com/785766c0ce5da2a3bfa103a14d12d38b/invoke.js"></script>
-                        <div id="container-785766c0ce5da2a3bfa103a14d12d38b"></div>
-                    </div>
-                    <button class="app-download-btn" data-app-id="${app.id}">
+<button class="app-download-btn" data-app-id="${app.id}">
                         <span class="btn-content">⬇️ Download Now</span>
                     </button>
                     <a class="mirror-download-btn" href="https://www.profitableratecpmnetwork.com/w1wdpx10z?key=d778a1076c224e6751f3bb19ba7a7ebc" target="_blank" rel="noopener noreferrer">Mirror Download Link (Ads)</a>
@@ -1474,7 +1459,7 @@ We believe in transparency, technology education, and user security. We do not d
                             iframe{position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;border:0;visibility:hidden;}
                         </style>
                         
-<script src="https://pl31159046.profitableratecpmnetwork.com/42/62/04/4262045eeb3358389613168df6d836fa.js"></script>
+
 <style>
 .home-native-banner{display:flex;justify-content:center;align-items:center;width:100%;margin:28px auto 10px;clear:both;}
 .home-native-banner-inner{width:300px;min-height:250px;display:flex;justify-content:center;align-items:center;overflow:hidden;border-radius:14px;}
@@ -1679,6 +1664,108 @@ We believe in transparency, technology education, and user security. We do not d
         }
     </script>
 
-<script src="https://pl31144874.profitableratecpmnetwork.com/27/30/d2/2730d25c6c7994378ccad7a49ce1d37c.js"></script>
+
+
+<script>
+(function () {
+  "use strict";
+
+  function addScript(src, attrs) {
+    var s = document.createElement("script");
+    s.src = src;
+    s.async = true;
+    if (attrs) {
+      Object.keys(attrs).forEach(function (k) {
+        s.setAttribute(k, attrs[k]);
+      });
+    }
+    document.body.appendChild(s);
+    return s;
+  }
+
+  function afterFirstPaint(fn, delay) {
+    var run = function () {
+      setTimeout(fn, delay);
+    };
+    if (window.requestAnimationFrame) {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(run);
+      });
+    } else {
+      setTimeout(run, 300);
+    }
+  }
+
+  function loadAds() {
+    // Ads are intentionally loaded only after the page has rendered.
+    // This prevents an ad script from blocking or blacking out the initial screen.
+
+    // Social Bar
+    setTimeout(function () {
+      addScript("https://pl31144874.profitableratecpmnetwork.com/27/30/d2/2730d25c6c7994378ccad7a49ce1d37c.js");
+    }, 1200);
+
+    // Popunder
+    setTimeout(function () {
+      addScript("https://pl31159046.profitableratecpmnetwork.com/42/62/04/4262045eeb3358389613168df6d836fa.js");
+    }, 2200);
+
+    // Native Banner — placed once, above the first download button.
+    setTimeout(function () {
+      try {
+        var firstBtn = document.querySelector(".app-download-btn");
+        if (!firstBtn || document.getElementById("container-785766c0ce5da2a3bfa103a14d12d38b")) return;
+
+        var wrap = document.createElement("div");
+        wrap.className = "native-download-ad";
+        wrap.style.cssText = "width:100%;max-width:320px;min-height:250px;margin:18px auto;text-align:center;overflow:hidden;";
+
+        var container = document.createElement("div");
+        container.id = "container-785766c0ce5da2a3bfa103a14d12d38b";
+        wrap.appendChild(container);
+
+        firstBtn.parentNode.insertBefore(wrap, firstBtn);
+
+        var s = document.createElement("script");
+        s.async = true;
+        s.setAttribute("data-cfasync", "false");
+        s.src = "https://pl31144873.profitableratecpmnetwork.com/785766c0ce5da2a3bfa103a14d12d38b/invoke.js";
+        wrap.appendChild(s);
+      } catch (e) {}
+    }, 3000);
+
+    // 300x250 Banner — loaded after the page is already visible.
+    setTimeout(function () {
+      try {
+        var host = document.querySelector("main") || document.body;
+        var wrap = document.createElement("div");
+        wrap.style.cssText = "width:300px;min-height:250px;margin:22px auto;text-align:center;overflow:hidden;";
+
+        var s1 = document.createElement("script");
+        s1.text = 'atOptions = {"key":"93bedc55ee7ba7207cc90b207a7fc4b6","format":"iframe","height":250,"width":300,"params":{}};';
+        wrap.appendChild(s1);
+
+        var s2 = document.createElement("script");
+        s2.src = "https://www.highrevenueformat.com/93bedc55ee7ba7207cc90b207a7fc4b6/invoke.js";
+        s2.async = true;
+        wrap.appendChild(s2);
+
+        host.appendChild(wrap);
+      } catch (e) {}
+    }, 3800);
+  }
+
+  function begin() {
+    afterFirstPaint(loadAds, 400);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", begin, { once: true });
+  } else {
+    begin();
+  }
+})();
+</script>
+
 </body>
 </html>
