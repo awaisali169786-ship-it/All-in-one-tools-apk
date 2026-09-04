@@ -1466,6 +1466,22 @@ We believe in transparency, technology education, and user security. We do not d
 .mirror-download-btn{display:block;margin:9px auto 0;padding:9px 12px;text-align:center;background:transparent;color:var(--accent,#00e5ff);border:1px solid rgba(0,229,255,.35);border-radius:9px;text-decoration:none;font-weight:600;font-size:.78rem;font-family:'Poppins',sans-serif;transition:all .25s ease;}
 .mirror-download-btn:hover{background:rgba(0,229,255,.08);border-color:var(--accent,#00e5ff);transform:translateY(-1px);}
 </style>
+<style>
+/* Keep app icons and download controls visually unobstructed by ad containers. */
+.app-icon-large, .real-app-icon, .app-download-btn, .app-title {
+  position: relative;
+  z-index: 20;
+}
+.native-download-ad, .delayed-300-banner {
+  position: relative;
+  z-index: 5;
+  display: block;
+  clear: both;
+}
+.native-download-ad iframe, .delayed-300-banner iframe {
+  max-width: 100%;
+}
+</style>
 </head><body>
                         <div class="box">
                             <h1>⬇️ ${escapeHtml(app.title)}</h1>
@@ -1718,7 +1734,7 @@ We believe in transparency, technology education, and user security. We do not d
 
         var wrap = document.createElement("div");
         wrap.className = "native-download-ad";
-        wrap.style.cssText = "width:100%;max-width:320px;min-height:250px;margin:18px auto;text-align:center;overflow:hidden;";
+        wrap.style.cssText = "display:block;position:relative;width:100%;max-width:320px;min-height:250px;margin:18px auto;text-align:center;overflow:hidden;clear:both;";
 
         var container = document.createElement("div");
         container.id = "container-785766c0ce5da2a3bfa103a14d12d38b";
@@ -1739,7 +1755,8 @@ We believe in transparency, technology education, and user security. We do not d
       try {
         var host = document.querySelector("main") || document.body;
         var wrap = document.createElement("div");
-        wrap.style.cssText = "width:300px;min-height:250px;margin:22px auto;text-align:center;overflow:hidden;";
+        wrap.className = "delayed-300-banner";
+        wrap.style.cssText = "display:block;position:relative;width:300px;min-height:250px;margin:22px auto;text-align:center;overflow:hidden;clear:both;";
 
         var s1 = document.createElement("script");
         s1.text = 'atOptions = {"key":"93bedc55ee7ba7207cc90b207a7fc4b6","format":"iframe","height":250,"width":300,"params":{}};';
